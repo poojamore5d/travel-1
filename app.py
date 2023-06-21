@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 app=Flask(__name__)
-model=pickle.load(open('Model.pkl','rb'))
+model=pickle.load(open('model.pkl','rb'))
 @app.route('/')
 def home():
     #return 'Hello World'
