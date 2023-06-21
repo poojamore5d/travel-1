@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 app=Flask(__name__)
-model=pickle.load(open('model.pkl','rb'))
+model=pickle.load(open('Model.pkl','rb'))
 @app.route('/')
 def home():
     #return 'Hello World'
@@ -29,7 +29,7 @@ def predict():
     output=model.predict(final_features)[0]
     print(output)
     #output = round(prediction[0], 2)
-    return render_template('home.html', prediction_text="Airfoil pressure is  {}".format(output))
+    return render_template('home.html', prediction_text="Travel Package is  {}".format(output))
 
 
 
